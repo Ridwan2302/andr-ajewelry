@@ -8,7 +8,7 @@ export default function Engagements() {
           Nos engagements
         </div>
         <h2 className="font-display text-[clamp(36px,9vw,62px)] font-medium text-ink leading-[1.05]">
-          Pourquoi choisir Andréa
+          Pourquoi choisir nos bijoux
         </h2>
       </div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-11">
