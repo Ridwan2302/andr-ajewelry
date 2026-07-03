@@ -17,7 +17,7 @@ export default function Header({ onToggleMenu }: HeaderProps) {
             Produits
           </a>
           <a href="#apropos" className={navLinkClass}>
-            La Maison
+            La Boutique
           </a>
         </nav>
 
@@ -31,8 +31,8 @@ export default function Header({ onToggleMenu }: HeaderProps) {
         </a>
 
         <div className="flex gap-6 flex-1 justify-end items-center">
-          <a href="#savoirfaire" className={`hidden nav:inline ${navLinkClass}`}>
-            Savoir-faire
+          <a href="#engagements" className={`hidden nav:inline ${navLinkClass}`}>
+            Nos engagements
           </a>
           <a href="#contact" className={`hidden nav:inline ${navLinkClass}`}>
             Contact

@@ -12,8 +12,8 @@ export default function Footer() {
             Jewelry
           </div>
           <p className="text-sm font-light leading-[1.8] max-w-[300px] text-muted-warm-2">
-            Maison de joaillerie fondée à Abidjan. Des créations faites main,
-            pensées pour durer.
+            Boutique de bijoux fondée à Abidjan. Acier inoxydable et plaqué
+            or, pensés pour durer au quotidien.
           </p>
         </div>
 
@@ -28,8 +28,8 @@ export default function Footer() {
             <a href="#produits" className={footerLinkClass}>
               Produits
             </a>
-            <a href="#contact" className={footerLinkClass}>
-              Sur-mesure
+            <a href="#produits" className={footerLinkClass}>
+              Nouveautés
             </a>
             <a href="#contact" className={footerLinkClass}>
               Cartes cadeaux
@@ -39,14 +39,14 @@ export default function Footer() {
 
         <div>
           <div className="text-[11px] tracking-[0.18em] uppercase text-off-white mb-4">
-            La Maison
+            La Boutique
           </div>
           <div className="flex flex-col gap-[11px] text-sm font-light">
             <a href="#apropos" className={footerLinkClass}>
               Notre histoire
             </a>
-            <a href="#savoirfaire" className={footerLinkClass}>
-              Savoir-faire
+            <a href="#engagements" className={footerLinkClass}>
+              Nos engagements
             </a>
             <a href="#contact" className={footerLinkClass}>
               Nous contacter

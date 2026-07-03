@@ -6,7 +6,7 @@ import Hero from "./components/Hero";
 import Collections from "./components/Collections";
 import Products from "./components/Products";
 import About from "./components/About";
-import Savoirfaire from "./components/Savoirfaire";
+import Engagements from "./components/Engagements";
 import FeatureBanner from "./components/FeatureBanner";
 import Testimonial from "./components/Testimonial";
 import Newsletter from "./components/Newsletter";
@@ -24,7 +24,7 @@ function App() {
       <Collections />
       <Products />
       <About />
-      <Savoirfaire />
+      <Engagements />
       <FeatureBanner />
       <Testimonial />
       <Newsletter />

@@ -22,8 +22,8 @@ export default function Hero() {
           L'éclat qui vous ressemble
         </h1>
         <p className="text-warm-light text-base font-light max-w-[460px] mt-[22px] leading-[1.7]">
-          Achetez nos bijoux en or 18 carats et commandez en un clic sur
-          WhatsApp. Livraison partout à Abidjan.
+          Bijoux en acier inoxydable et plaqué or, choisis pour durer.
+          Commandez en un clic sur WhatsApp. Livraison partout à Abidjan.
         </p>
         <div className="flex gap-3 mt-[34px] flex-wrap">
           <a

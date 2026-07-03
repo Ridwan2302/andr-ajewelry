@@ -7,17 +7,17 @@ export interface Value {
 export const values: Value[] = [
   {
     num: "01",
-    title: "Fait main",
-    text: "Chaque pièce est fondue, sertie et polie à la main dans notre atelier de Cocody.",
+    title: "Qualité durable",
+    text: "Acier inoxydable et plaqué or résistants à l'eau, à la transpiration et au temps.",
   },
   {
     num: "02",
-    title: "Matières nobles",
-    text: "Or 18 carats certifié et pierres sélectionnées une à une pour leur éclat.",
+    title: "Hypoallergénique",
+    text: "Sans nickel, doux pour les peaux sensibles — à porter chaque jour sans souci.",
   },
   {
     num: "03",
-    title: "Sur-mesure",
-    text: "Nos joailliers conçoivent avec vous la création unique qui vous ressemble.",
+    title: "Prix juste",
+    text: "Le style des grandes maisons, à des prix pensés pour Abidjan.",
   },
 ];

@@ -7,8 +7,8 @@ const links = [
   { href: "#accueil", label: "Accueil" },
   { href: "#collections", label: "Collections" },
   { href: "#produits", label: "Produits" },
-  { href: "#apropos", label: "La Maison" },
-  { href: "#savoirfaire", label: "Savoir-faire" },
+  { href: "#apropos", label: "La Boutique" },
+  { href: "#engagements", label: "Nos engagements" },
   { href: "#contact", label: "Contact" },
 ];
 
