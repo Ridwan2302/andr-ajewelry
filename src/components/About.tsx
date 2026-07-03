@@ -1,11 +1,23 @@
+import { useInView } from "../hooks/useInView";
+
 const BOUTIQUE_IMG =
   "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1200&q=80";
 
 export default function About() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <section id="apropos" className="bg-ink text-warm-light mt-[60px]">
+    <section
+      id="apropos"
+      ref={ref}
+      className="bg-ink text-warm-light mt-[60px]"
+    >
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 nav:grid-cols-2 items-stretch">
-        <div className="px-7 py-18 flex flex-col justify-center order-2">
+        <div
+          className={`reveal px-7 py-18 flex flex-col justify-center order-2 ${
+            inView ? "is-visible" : ""
+          }`}
+        >
           <div className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">
             Notre boutique
           </div>
@@ -29,7 +41,12 @@ export default function About() {
             Nos engagements
           </a>
         </div>
-        <div className="relative overflow-hidden min-h-[320px] order-1">
+        <div
+          className={`reveal relative overflow-hidden min-h-[320px] order-1 ${
+            inView ? "is-visible" : ""
+          }`}
+          style={{ transitionDelay: inView ? "150ms" : "0ms" }}
+        >
           <img
             src={BOUTIQUE_IMG}
             alt="Boutique Andréa"

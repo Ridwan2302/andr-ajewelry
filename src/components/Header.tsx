@@ -7,7 +7,7 @@ const navLinkClass =
 
 export default function Header({ onToggleMenu }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-[100] bg-cream/90 backdrop-blur-md border-b border-ink/10">
+    <header className="animate-fade-in-page sticky top-0 z-[100] bg-cream/90 backdrop-blur-md border-b border-ink/10">
       <div className="max-w-[1280px] mx-auto px-5 h-[68px] flex items-center justify-between">
         <nav className="hidden nav:flex gap-[30px] flex-1 items-center">
           <a href="#collections" className={navLinkClass}>

@@ -1,16 +1,27 @@
+import { useInView } from "../hooks/useInView";
+
 const FEATURE_IMG =
   "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1600&q=80";
 
 export default function FeatureBanner() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <section className="relative min-h-[460px] flex items-center overflow-hidden">
+    <section
+      ref={ref}
+      className="relative min-h-[460px] flex items-center overflow-hidden"
+    >
       <img
         src={FEATURE_IMG}
         alt="Collection signature"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-ink/50" />
-      <div className="relative max-w-[1280px] mx-auto px-6 w-full text-center z-[2]">
+      <div
+        className={`reveal relative max-w-[1280px] mx-auto px-6 w-full text-center z-[2] ${
+          inView ? "is-visible" : ""
+        }`}
+      >
         <div className="text-[11px] tracking-[0.3em] uppercase text-warm-light-2 mb-[18px]">
           Le bon choix
         </div>

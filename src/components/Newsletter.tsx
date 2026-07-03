@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
+import { useInView } from "../hooks/useInView";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const { ref, inView } = useInView<HTMLElement>();
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -16,8 +18,12 @@ export default function Newsletter() {
   }
 
   return (
-    <section id="contact" className="bg-cream-alt py-20 px-6">
-      <div className="max-w-[640px] mx-auto text-center">
+    <section id="contact" ref={ref} className="bg-cream-alt py-20 px-6">
+      <div
+        className={`reveal max-w-[640px] mx-auto text-center ${
+          inView ? "is-visible" : ""
+        }`}
+      >
         <div className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">
           Restons en contact
         </div>

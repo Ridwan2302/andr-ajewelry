@@ -1,10 +1,21 @@
 import { products } from "../data/products";
 import { productWhatsappLink } from "../lib/whatsapp";
+import { useInView } from "../hooks/useInView";
 
 export default function Products() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <section id="produits" className="max-w-[1280px] mx-auto px-5 pt-[60px] pb-10">
-      <div className="flex justify-between items-end mb-11 flex-wrap gap-4">
+    <section
+      id="produits"
+      ref={ref}
+      className="max-w-[1280px] mx-auto px-5 pt-[60px] pb-10"
+    >
+      <div
+        className={`reveal flex justify-between items-end mb-11 flex-wrap gap-4 ${
+          inView ? "is-visible" : ""
+        }`}
+      >
         <div>
           <div className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3.5">
             Sélection du moment
@@ -22,13 +33,16 @@ export default function Products() {
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-4 gap-y-[30px]">
-        {products.map((p) => (
+        {products.map((p, i) => (
           <a
             key={p.name}
             href={productWhatsappLink(p.name, p.price)}
             target="_blank"
             rel="noopener"
-            className="no-underline text-inherit block cursor-pointer group"
+            className={`reveal no-underline text-inherit block cursor-pointer group ${
+              inView ? "is-visible" : ""
+            }`}
+            style={{ transitionDelay: inView ? `${Math.min(i, 7) * 60}ms` : "0ms" }}
           >
             <div className="relative aspect-square overflow-hidden bg-tile mb-3.5">
               <img

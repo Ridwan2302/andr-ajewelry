@@ -1,9 +1,17 @@
+import { useInView } from "../hooks/useInView";
+
 const footerLinkClass = "text-muted-warm no-underline hover:text-gold transition-colors";
 
 export default function Footer() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <footer className="bg-ink text-muted-warm pt-16 px-6 pb-9">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-2 nav:grid-cols-[1.6fr_1fr_1fr_1fr] gap-x-8 gap-y-10">
+    <footer ref={ref} className="bg-ink text-muted-warm pt-16 px-6 pb-9">
+      <div
+        className={`reveal max-w-[1280px] mx-auto grid grid-cols-2 nav:grid-cols-[1.6fr_1fr_1fr_1fr] gap-x-8 gap-y-10 ${
+          inView ? "is-visible" : ""
+        }`}
+      >
         <div className="col-span-2 nav:col-span-1">
           <div className="font-display text-[28px] text-off-white leading-none">
             Andréa

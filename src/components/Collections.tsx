@@ -1,9 +1,16 @@
 import { collections } from "../data/collections";
+import { useInView } from "../hooks/useInView";
 
 export default function Collections() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <section id="collections" className="max-w-[1280px] mx-auto px-5 pt-[84px] pb-10">
-      <div className="text-center mb-12">
+    <section
+      id="collections"
+      ref={ref}
+      className="max-w-[1280px] mx-auto px-5 pt-[84px] pb-10"
+    >
+      <div className={`reveal text-center mb-12 ${inView ? "is-visible" : ""}`}>
         <div className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3.5">
           Explorer
         </div>
@@ -12,11 +19,14 @@ export default function Collections() {
         </h2>
       </div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3.5">
-        {collections.map((c) => (
+        {collections.map((c, i) => (
           <a
             key={c.name}
             href="#produits"
-            className="no-underline block relative aspect-[3/4] overflow-hidden bg-tile group"
+            className={`reveal no-underline block relative aspect-[3/4] overflow-hidden bg-tile group ${
+              inView ? "is-visible" : ""
+            }`}
+            style={{ transitionDelay: inView ? `${i * 90}ms` : "0ms" }}
           >
             <img
               src={c.img}
